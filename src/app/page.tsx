@@ -61,7 +61,7 @@ export default function Home() {
           alt=""
           className="md:absolute md:block hidden xl:h-screen lg:h-[80vh] h-[70vh] w-auto right-0 -z-10 lg:pr-20 pr-8"
         />
-        <div className="md:hidden absolute -bottom-28 w-screen h-[50vh]  bg-right-top bg-cover bg-[url('https://raw.githubusercontent.com/Coffee-Culture-UK/coffee-culture-frontend/main/public/small-hero.png')]"></div>
+        <div className="md:hidden absolute -bottom-28 w-screen h-[50vh] -z-10 bg-right-top bg-cover bg-[url('https://raw.githubusercontent.com/Coffee-Culture-UK/coffee-culture-frontend/main/public/small-hero.png')]"></div>
       </div>
       <div className="h-screen w-full"></div>
     </main>
