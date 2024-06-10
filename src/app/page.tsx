@@ -4,24 +4,21 @@ import { primary, secondary } from "@/themes/customs/palette";
 
 export default function Home() {
   return (
-    <main className="flex min-h-[calc(100vh-60px)] flex-col items-center justify-center w-full mt-[60px]">
+    <main className="flex min-h-[calc(100vh-60px)] flex-col items-start md:justify-center justify-start w-full md:mt-[60px] -mt-[24px]">
       <div className="flex h-[calc(100vh-60px)] items-center justify-start container ">
-        <div className="flex flex-col items-start justify-center gap-y-2 px-32 -mt-5">
-          <div className="uppercase text-md text-[var(--darkBrown)] opacity-50">
+        <div className="flex flex-col md:items-start justify-center md:gap-y-2 gap-y-3 md:px-32 px-5 -mt-5 items-center md:text-start text-center ">
+          <div className="uppercase md:text-md text-sm text-[var(--darkBrown)] opacity-50">
             Digital subscription & loyalty
           </div>
-          <div className="text-4xl font-semibold text-[var(--darkBrown)] w-80">
+          <div className="md:text-4xl text-3xl font-semibold text-[var(--darkBrown)] md:w-80 w-64 md:pb-0">
             Supporting your <span className="italic font-medium">local</span>{" "}
             coffee shop
           </div>
-          <div className="text-base font-light">
-            Our mission is to help coffee shop owners bring in loyal customers{" "}
-            <br />
-            and guarantee revenue.
+          <div className="md:text-base text-xs font-light md:w-[496px]">
+            Our mission is to help coffee shop owners bring in loyal customers and guarantee revenue.
           </div>
-          <div className="text-base font-light">
-            Find a cup of coffee with a story and a saving with our <br />
-            subscription and stamp schemes.
+          <div className="md:text-base text-xs font-light md:w-[496px]">
+            Find a cup of coffee with a story and a saving with our subscription and stamp schemes.
           </div>
           <div className="flex gap-x-2 pt-2">
             <Button
@@ -63,10 +60,16 @@ export default function Home() {
         <img
           src="hero.png"
           alt=""
-          className="absolute h-screen w-auto right-0 -z-10 pr-20"
+          className="md:absolute hidden h-screen w-auto right-0 -z-10 pr-20"
         />
+        <div className="md:hidden absolute -bottom-20 w-screen">
+
+        </div>
       </div>
-      <div className="h-screen"></div>
+      <div className="h-screen w-full">
+
+      </div>
+
     </main>
   );
 }
