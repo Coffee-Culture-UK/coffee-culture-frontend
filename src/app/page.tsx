@@ -5,8 +5,8 @@ import { primary, secondary } from "@/themes/customs/palette";
 export default function Home() {
   return (
     <main className="flex min-h-[calc(100vh-60px)] flex-col items-start md:justify-center justify-start w-full md:mt-[60px] -mt-[24px]">
-      <div className="flex h-[calc(100vh-60px)] items-center justify-start container ">
-        <div className="flex flex-col md:items-start justify-center md:gap-y-2 gap-y-3 md:px-32 px-5 -mt-5 items-center md:text-start text-center ">
+      <div className="flex h-[calc(100vh-60px)] items-center md:justify-start justify-center container ">
+        <div className="flex flex-col md:items-start justify-center md:gap-y-2 gap-y-3 lg:px-32 md:px-20 px-5 -mt-5 items-center md:text-start text-center ">
           <div className="uppercase md:text-md text-sm text-[var(--darkBrown)] opacity-50">
             Digital subscription & loyalty
           </div>
@@ -14,11 +14,11 @@ export default function Home() {
             Supporting your <span className="italic font-medium">local</span>{" "}
             coffee shop
           </div>
-          <div className="md:text-base text-xs font-light md:w-[496px]">
+          <div className="md:text-base text-xs font-light xl:w-[496px] lg:w-96 md:w-80 w-72">
             Our mission is to help coffee shop owners bring in loyal customers
             and guarantee revenue.
           </div>
-          <div className="md:text-base text-xs font-light md:w-[496px]">
+          <div className="md:text-base text-xs font-light xl:w-[496px] lg:w-96 md:w-80 w-72">
             Find a cup of coffee with a story and a saving with our subscription
             and stamp schemes.
           </div>
@@ -59,7 +59,7 @@ export default function Home() {
         <img
           src="hero.png"
           alt=""
-          className="md:absolute md:block hidden h-screen w-auto right-0 -z-10 pr-20"
+          className="md:absolute md:block hidden xl:h-screen lg:h-[80vh] h-[70vh] w-auto right-0 -z-10 lg:pr-20 pr-8"
         />
         <div className="md:hidden absolute -bottom-28 w-screen h-[50vh]  bg-right-top bg-cover bg-[url('https://raw.githubusercontent.com/Coffee-Culture-UK/coffee-culture-frontend/main/public/small-hero.png')]"></div>
       </div>
