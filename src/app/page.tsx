@@ -15,10 +15,12 @@ export default function Home() {
             coffee shop
           </div>
           <div className="md:text-base text-xs font-light md:w-[496px]">
-            Our mission is to help coffee shop owners bring in loyal customers and guarantee revenue.
+            Our mission is to help coffee shop owners bring in loyal customers
+            and guarantee revenue.
           </div>
           <div className="md:text-base text-xs font-light md:w-[496px]">
-            Find a cup of coffee with a story and a saving with our subscription and stamp schemes.
+            Find a cup of coffee with a story and a saving with our subscription
+            and stamp schemes.
           </div>
           <div className="flex gap-x-2 pt-2">
             <Button
@@ -45,11 +47,8 @@ export default function Home() {
                 fontSize: "12px",
                 paddingX: "24px",
                 color: secondary.contrastText,
-                border: 'solid 2px secondary.main',
+                border: "solid 2px secondary.main",
                 borderColor: secondary.main,
-                
-
-                
               }}
               disableElevation
             >
@@ -62,14 +61,9 @@ export default function Home() {
           alt=""
           className="md:absolute md:block hidden h-screen w-auto right-0 -z-10 pr-20"
         />
-        <div className="md:hidden absolute -bottom-20 w-screen">
-
-        </div>
+        <div className="md:hidden absolute -bottom-28 w-screen h-[50vh]  bg-right-top bg-cover bg-[url('https://raw.githubusercontent.com/Coffee-Culture-UK/coffee-culture-frontend/main/public/small-hero.png')]"></div>
       </div>
-      <div className="h-screen w-full">
-
-      </div>
-
+      <div className="h-screen w-full"></div>
     </main>
   );
 }
