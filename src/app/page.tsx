@@ -60,9 +60,9 @@ export default function Home() {
         <img
           src="hero.png"
           alt=""
-          className="md:absolute hidden h-screen w-auto right-0 -z-10 pr-20"
+          className="md:absolute md:block hidden h-screen w-auto right-0 -z-10 pr-20"
         />
-        <div className="md:hidden absolute -bottom-20 w-screen">
+        <div className="md:hidden -bottom-20 w-screen">
 
         </div>
       </div>
