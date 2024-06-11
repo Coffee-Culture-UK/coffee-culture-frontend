@@ -1,11 +1,14 @@
+"use client";
 import Image from "next/image";
 import Button from "@mui/material/Button";
 import { primary, secondary } from "@/themes/customs/palette";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
-    <main className="flex min-h-[calc(100vh-60px)] flex-col md:items-start md:justify-center items-center justify-start w-full md:mt-[60px] -mt-[24px]">
-      <div className="flex h-[calc(100vh-60px)] items-center md:justify-start justify-center container ">
+    <main className="flex min-h-[calc(100vh-60px)] flex-col md:items-start md:justify-center items-center justify-start w-full md:mt-[60px] ">
+      <div className="flex md:flex-row flex-col min-h-[calc(100vh-60px)] items-center md:justify-start justify-center container md:pt-0 pt-40">
         <div className="flex flex-col md:items-start justify-center md:gap-y-2 gap-y-3 lg:px-32 md:px-20 px-5 -mt-5 items-center md:text-start text-center ">
           <div className="uppercase md:text-md text-sm text-[var(--darkBrown)] opacity-50">
             Digital subscription & loyalty
@@ -51,18 +54,25 @@ export default function Home() {
                 borderColor: secondary.main,
               }}
               disableElevation
+              onClick={() => {
+                router.push("https://www.coffee-culture.uk/cafeguide");
+              }}
             >
               Check out our guide!
             </Button>
           </div>
         </div>
+
         <img
           src="hero.png"
           alt=""
           className="md:absolute md:block hidden xl:h-screen lg:h-[80vh] h-[70vh] w-auto right-0 -z-10 lg:pr-20 pr-8"
         />
-        <div className="md:hidden absolute -bottom-[25rem] w-screen h-[90vh] -z-10 bg-top bg-no-repeat bg-contain bg-[url('https://raw.githubusercontent.com/Coffee-Culture-UK/coffee-culture-frontend/main/public/small-hero.png')]"></div>
+        <img src="small-hero.png" alt="" 
+        className="w-screen md:hidden block pt-16 h-auto"/>
+        {/* <div className="md:hidden block w-screen h-[90vh] mt-20 border-red-500 border-2 border-solid bg-top bg-no-repeat bg-contain bg-[url('https://raw.githubusercontent.com/Coffee-Culture-UK/coffee-culture-frontend/main/public/small-hero.png')]"></div> */}
       </div>
+
       <div className="h-screen w-full"></div>
     </main>
   );
