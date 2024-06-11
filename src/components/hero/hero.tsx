@@ -3,28 +3,26 @@ import Image from "next/image";
 import Button from "@mui/material/Button";
 import { primary, secondary } from "@/themes/customs/palette";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import React, { useCallback } from "react";
-
-
+import React, { Suspense, useCallback } from "react";
 
 export default function Hero({}) {
-    const router = useRouter();
-    const searchParams = useSearchParams();
-    const pathname = usePathname();
-    
-    const createQueryString = useCallback(
-        (name: string, value: string) => {
-          const params = new URLSearchParams(searchParams.toString())
-          params.set(name, value)
-     
-          return params.toString()
-        },
-        [searchParams]
-      )
-    
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
 
-    return(
-        <div className="flex md:flex-row flex-col min-h-[calc(100vh-60px)] items-center md:justify-start justify-center container md:pt-0 pt-40">
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+
+      return params.toString();
+    },
+    [searchParams]
+  );
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="flex md:flex-row flex-col min-h-[calc(100vh-60px)] items-center md:justify-start justify-center container md:pt-0 pt-40">
         <div className="flex flex-col md:items-start justify-center md:gap-y-2 gap-y-3 lg:px-32 md:px-20 px-5 -mt-5 items-center md:text-start text-center ">
           <div className="uppercase md:text-md text-sm text-[var(--darkBrown)] opacity-50">
             Digital subscription & loyalty
@@ -55,7 +53,11 @@ export default function Hero({}) {
                 },
               }}
               disableElevation
-              onClick={()=>{router.push(pathname + '?' + createQueryString('register', 'true'))}}
+              onClick={() => {
+                router.push(
+                  pathname + "?" + createQueryString("register", "true")
+                );
+              }}
             >
               Sign Up
             </Button>
@@ -85,9 +87,13 @@ export default function Hero({}) {
           alt=""
           className="md:absolute md:block hidden xl:h-screen lg:h-[80vh] h-[70vh] w-auto right-0 -z-10 lg:pr-20 pr-8"
         />
-        <img src="small-hero.png" alt="" 
-        className="w-screen md:hidden block pt-16 h-auto"/>
+        <img
+          src="small-hero.png"
+          alt=""
+          className="w-screen md:hidden block pt-16 h-auto"
+        />
         {/* <div className="md:hidden block w-screen h-[90vh] mt-20 border-red-500 border-2 border-solid bg-top bg-no-repeat bg-contain bg-[url('https://raw.githubusercontent.com/Coffee-Culture-UK/coffee-culture-frontend/main/public/small-hero.png')]"></div> */}
       </div>
-    )
+    </Suspense>
+  );
 }
