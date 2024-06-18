@@ -7,6 +7,7 @@ import {
 import { merge } from "lodash";
 import { useMemo } from "react";
 import { palette, primary } from "./customs/palette";
+// import { componentsOverrides } from "./overrides";
 
 type Props = {
     children: React.ReactNode;
@@ -29,7 +30,15 @@ export default function ThemeProvider({ children }: Props) {
                         
                         
                     }
-                }
+                },
+                // overrides: {
+                    
+                //     MuiInputBase: {
+                //         root: {
+                //           padding: '200px',
+                //         },
+                //       },
+                // }
 
             } as ThemeOptions),
     []);
