@@ -70,7 +70,7 @@ export default function Register({ register }: { register: boolean }) {
                 customer
               </div>
             </div>
-            <PersonOutlineIcon className={`h-5 w-5 duration-300 ${user.userType == UserType.CUSTOMER ? " text-[var(--darkBrown)]": "text-[var(--darkBrown20)]"}`} />
+            <PersonOutlineIcon className={`h-5 w-5 duration-300 ${user.userType == UserType.SHOP ? " text-[var(--darkBrown20)]": "text-[var(--darkBrown)]"}`} />
           </div>
           <Button
             variant="contained"
