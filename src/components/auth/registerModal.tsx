@@ -42,7 +42,7 @@ export default function Register({ register }: { register: boolean }) {
           <div className="text-2xl font-medium">sign up</div>
 
           <div className="flex gap-x-2 items-center justify-center">
-            <StorefrontIcon className="h-5 w-5" />
+            <StorefrontIcon className={`h-5 w-5 duration-300 ${user.userType == UserType.SHOP ? " text-[var(--darkBrown)]": "text-[var(--darkBrown20)]"}`} />
             <div className="flex bg-[var(--darkBrown10)] rounded-full text-[var(--darkBrown)] text-xs relative">
               <div
                 className={`absolute bg-[var(--green)] rounded-full px-3 py-1  text-[var(--green)] duration-300 z-0 ${
@@ -70,7 +70,7 @@ export default function Register({ register }: { register: boolean }) {
                 customer
               </div>
             </div>
-            <PersonOutlineIcon className="h-5 w-5" />
+            <PersonOutlineIcon className={`h-5 w-5 duration-300 ${user.userType == UserType.CUSTOMER ? " text-[var(--darkBrown)]": "text-[var(--darkBrown20)]"}`} />
           </div>
           <Button
             variant="contained"
