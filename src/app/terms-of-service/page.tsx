@@ -16,14 +16,14 @@ export default function TermsOfService() {
           </div>
           <div className="text-xs">
             We are Coffee Culture London LTD, doing business as Coffee Culture
-            UK ('Company', 'we', 'us', or 'our'), a company registered in the
+            UK (&apos;Company&apos;, &apos;we&apos;, &apos;us&apos;, or &apos;our&apos;), a company registered in the
             United Kingdom at 26 Beverly House, 133 Park Road London, London NW8
             7JD. <br />
             <br />
-            We operate the website https://www.coffee-culture.uk(the 'Site'),
-            the mobile application Coffee Culture London (the 'App'), as well as
+            We operate the website https://www.coffee-culture.uk(the &apos;Site&apos;),
+            the mobile application Coffee Culture London (the &apos;App&apos;), as well as
             any other related products and services that refer or link to these
-            legal terms (the 'Legal Terms') (collectively, the 'Services').{" "}
+            legal terms (the &apos;Legal Terms&apos;) (collectively, the &apos;Services&apos;).{" "}
             <br />
             <br /> We provide digital loyalty and subscription solutions for
             independent coffee shops alongside end-to-end consultancy services.{" "}
@@ -33,7 +33,7 @@ export default function TermsOfService() {
             info@coffee-culture.uk, or by mail to 26 Beverly House, 133 Park
             Road, London, LondonNW8 7JD, United Kingdom. <br />
             <br /> These Legal Terms constitute a legally binding agreement made
-            between you, whether personally or on behalf of an entity ('you'),
+            between you, whether personally or on behalf of an entity (&apos;you&apos;),
             and Coffee Culture London LTD, concerning your access to and use of
             the Services. You agree that by accessing the Services, you have
             read, understood, and agreed to be bound by all of these Legal
@@ -45,7 +45,7 @@ export default function TermsOfService() {
             incorporated herein by reference. We reserve the right, in our sole
             discretion, to make changes or modifications to these Legal Terms
             from time to time. We will alert you about any changes by updating
-            the 'Last updated' date of these Legal Terms, and you waive any
+            the &apos;Last updated&apos; date of these Legal Terms, and you waive any
             right to receive specific notice of each such change. It is your
             responsibility to periodically review these Legal Terms to stay
             informed of updates. You will be subject to and will be deemed to
@@ -123,14 +123,14 @@ export default function TermsOfService() {
             in our Services, including all source code, databases,
             functionality, software, website designs, audio, video, text,
             photographs, and graphics in the Services (collectively, the
-            'Content'), as well as the trademarks, service marks, and logos
-            contained therein (the 'Marks'). <br />
+            &apos;Content&apos;), as well as the trademarks, service marks, and logos
+            contained therein (the &apos;Marks&apos;). <br />
             <br /> Our Content and Marks are protected by copyright and
             trademark laws (and various other intellectual property rights and
             unfair competition laws) and treaties in the United States and
             around the world. <br /> <br />
-            The Content and Marks are provided in or through the Services 'AS
-            IS' for your personal, non-commercial use or internal business
+            The Content and Marks are provided in or through the Services &apos;AS
+            IS&apos; for your personal, non-commercial use or internal business
             purpose only.
           </div>
           <div className="text-xl font-medium pl-6">
@@ -138,7 +138,7 @@ export default function TermsOfService() {
           </div>
           <div className="text-xs pl-6">
             Subject to your compliance with these Legal Terms, including the
-            'PROHIBITED ACTIVITIES' section below, we grant you a non-exclusive,
+            &apos;PROHIBITED ACTIVITIES&apos; section below, we grant you a non-exclusive,
             non-transferable, revocable licence to:
             <ul className="list-disc pl-10">
               <li>access the Services; and</li>
@@ -175,13 +175,13 @@ export default function TermsOfService() {
             Your Submissions And Contributions
           </div>
           <div className="text-xs pl-6">
-            Please review this section and the 'PROHIBITED ACTIVITIES' section
+            Please review this section and the &apos;PROHIBITED ACTIVITIES&apos; section
             carefully prior to using our Services to understand the (a) rights
             you give us and (b) obligations you have when you post or upload any
             content through the Services. <br />
             <br /> Submissions: By directly sending us any question, comment,
             suggestion, idea, feedback, or other information about the Services
-            ('Submissions'), you agree to assign to us all intellectual property
+            (&apos;Submissions&apos;), you agree to assign to us all intellectual property
             rights in such Submission. You agree that we shall own this
             Submission and be entitled to its unrestricted use and dissemination
             for any lawful purpose, commercial or otherwise, without
@@ -193,7 +193,7 @@ export default function TermsOfService() {
             and materials to us or through the Services, including but not
             limited to text, writings, video, audio, photographs, music,
             graphics, comments, reviews, rating suggestions, personal
-            information, or other material ('Contributions'). Any Submission
+            information, or other material (&apos;Contributions&apos;). Any Submission
             that is publicly posted shall also be treated as a Contribution.
             <br />
             <br /> You understand that Contributions may be viewable by other
@@ -228,8 +228,8 @@ export default function TermsOfService() {
             <br />
             <ul className="list-disc pl-10">
               <li>
-                confirm that you have read and agree with our 'PROHIBITED
-                ACTIVITIES' and will not post, send, publish, upload, or
+                confirm that you have read and agree with our &apos;PROHIBITED
+                ACTIVITIES&apos; and will not post, send, publish, upload, or
                 transmit through the Services any Submission nor post any
                 Contribution that is illegal, harassing, hateful, harmful,
                 defamatory, obscene, bullying, abusive, discriminatory,
@@ -256,7 +256,7 @@ export default function TermsOfService() {
             You are solely responsible for your Submissions and/or Contributions
             and you expressly agree to reimburse us for any and all losses that
             we may suffer because of your breach of (a) this section, (b) any
-            third party's intellectual property rights, or (c) applicable law.
+            third party&apos;s intellectual property rights, or (c) applicable law.
             <br />
             <br />
             We may remove or edit your Content: Although we have no obligation
@@ -274,7 +274,7 @@ export default function TermsOfService() {
             We respect the intellectual property rights of others. If you
             believe that any material available on or through the Services
             infringes upon any copyright you own or control, please immediately
-            refer to the 'COPYRIGHT INFRINGEMENTS' section below.
+            refer to the &apos;COPYRIGHT INFRINGEMENTS&apos; section below.
           </div>
         </div>
         <div className="flex flex-col justify-start items-start gap-y-5 w-full" id="userrep">
@@ -364,7 +364,7 @@ export default function TermsOfService() {
           <div className="text-xl font-medium pl-6">Free Trial</div>
           <div className="text-xs pl-6">
             We offer a 30-day free trial to new users who register with the
-            Services. The account will be charged according to the user's chosen
+            Services. The account will be charged according to the user&apos;s chosen
             subscription at the end of the free trial.
           </div>
           <div className="text-xl font-medium pl-6">Cancellation</div>
@@ -386,12 +386,12 @@ export default function TermsOfService() {
           <div className="text-xs pl-6">
             We may include software for use in connection with our Services. If
             such software is accompanied by an end user licence agreement
-            ('EULA'), the terms of the EULA will govern your use of the
+            (&apos;EULA&apos;), the terms of the EULA will govern your use of the
             software. If such software is not accompanied by a EULA, then we
             grant to you a non-exclusive, revocable, personal, and
             non-transferable licence to use such software solely in connection
             with our services and in accordance with these Legal Terms. Any
-            software and any related documentation is provided 'AS IS' without
+            software and any related documentation is provided &apos;AS IS&apos; without
             warranty of any kind, either express or implied, including, without
             limitation, the implied warranties of merchantability, fitness for a
             particular purpose, or non-infringement. You accept all risk arising
@@ -452,7 +452,7 @@ export default function TermsOfService() {
                 Upload or transmit (or attempt to upload or to transmit)
                 viruses, Trojan horses, or other material, including excessive
                 use of capital letters and spamming (continuous posting of
-                repetitive text), that interferes with any party's uninterrupted
+                repetitive text), that interferes with any party&apos;s uninterrupted
                 use and enjoyment of the Services or modifies, impairs,
                 disrupts, alters, or interferes with the use, features,
                 functions, operation, or maintenance of the Services.{" "}
@@ -474,9 +474,9 @@ export default function TermsOfService() {
                 Upload or transmit (or attempt to upload or to transmit) any
                 material that acts as a passive or active information collection
                 or transmission mechanism, including without limitation, clear
-                graphics interchange formats ('gifs'), 1x1 pixels, web bugs,
+                graphics interchange formats (&apos;gifs&apos;), 1x1 pixels, web bugs,
                 cookies, or other similar devices (sometimes referred to as
-                'spyware' or 'passive collection mechanisms' or 'pcms').{" "}
+                &apos;spyware&apos; or &apos;passive collection mechanisms&apos; or &apos;pcms&apos;).{" "}
               </li>
               <li>
                 Interfere with, disrupt, or create an undue burden on the
@@ -492,7 +492,7 @@ export default function TermsOfService() {
                 the Services.{" "}
               </li>
               <li>
-                Copy or adapt the Services' software, including but not limited
+                Copy or adapt the Services&apos; software, including but not limited
                 to Flash, PHP, HTML, JavaScript, or other code.{" "}
               </li>
               <li>
@@ -543,7 +543,7 @@ export default function TermsOfService() {
             content and materials to us or on the Services, including but not
             limited to text, writings, video, audio, photographs, graphics,
             comments, suggestions, or personal information or other material
-            (collectively, 'Contributions'). Contributions may be viewable by
+            (collectively, &apos;Contributions&apos;). Contributions may be viewable by
             other users of the Services and through third-party websites. As
             such, any Contributions you transmit may be treated as
             non-confidential and non-proprietary. When you create or make
@@ -707,12 +707,12 @@ export default function TermsOfService() {
           </div>
           <div className="text-xs pl-6">
             The following terms apply when you use the App obtained from either
-            the Apple Store or Google Play (each an 'App Distributor') to access
+            the Apple Store or Google Play (each an &apos;App Distributor&apos;) to access
             the Services: (1) the licence granted to you for our App is limited
             to a non-transferable licence to use the application on a device
             that utilises the Apple iOS or Android operating systems, as
             applicable, and in accordance with the usage rules set forth in the
-            applicable App Distributor's terms of service; (2) we are
+            applicable App Distributor&apos;s terms of service; (2) we are
             responsible for providing any maintenance and support services with
             respect to the App as specified in the terms and conditions of this
             mobile application licence contained in these Legal Terms or as
@@ -727,7 +727,7 @@ export default function TermsOfService() {
             other warranty obligation whatsoever with respect to the App; (4)
             you represent and warrant that (i) you are not located in a country
             that is subject to a US government embargo, or that has been
-            designated by the US government as a 'terrorist supporting' country
+            designated by the US government as a &apos;terrorist supporting&apos; country
             and (ii) you are not listed on any US government list of prohibited
             or restricted parties; (5) you must comply with applicable
             third-party terms of agreement when using the App, e.g. if you have
@@ -747,7 +747,7 @@ export default function TermsOfService() {
           <div className="text-xs pl-6">
             As part of the functionality of the Services, you may link your
             account with online accounts you have with third-party service
-            providers (each such account, a 'Third-Party Account') by either:
+            providers (each such account, a &apos;Third-Party Account&apos;) by either:
             (1) providing your Third-Party Account login information through the
             Services; or (2) allowing us to access your Third-Party Account, as
             is permitted under the applicable terms and conditions that govern
@@ -761,7 +761,7 @@ export default function TermsOfService() {
             Third-Party Account. By granting us access to any Third-Party
             Accounts, you understand that (1) we may access, make available, and
             store (if applicable) any content that you have provided to and
-            stored in your Third-Party Account (the 'Social Network Content') so
+            stored in your Third-Party Account (the &apos;Social Network Content&apos;) so
             that it is available on and through the Services via your account,
             including without limitation any friend lists and (2) we may submit
             to and receive from your Third-Party Account additional information
@@ -801,11 +801,11 @@ export default function TermsOfService() {
           </div>
           <div className="text-xs pl-6">
             The Services may contain (or you may be sent via the Site or App)
-            links to other websites ('Third-Party Websites') as well as
+            links to other websites (&apos;Third-Party Websites&apos;) as well as
             articles, photographs, text, graphics, pictures, designs, music,
             sound, video, information, applications, software, and other content
             or items belonging to or originating from third parties
-            ('Third-Party Content'). Such Third-Party Websites and Third-Party
+            (&apos;Third-Party Content&apos;). Such Third-Party Websites and Third-Party
             Content are not investigated, monitored, or checked for accuracy,
             appropriateness, or completeness by us, and we are not responsible
             for any Third-Party Websites accessed through the Services or any
@@ -879,7 +879,7 @@ export default function TermsOfService() {
             believe that any material available on or through the Services
             infringes upon any copyright you own or control, please immediately
             notify us using the contact information provided below (a
-            'Notification'). A copy of your Notification will be sent to the
+            &apos;Notification&apos;). A copy of your Notification will be sent to the
             person who posted or stored the material addressed in the
             Notification. Please be advised that pursuant to applicable law you
             may be held liable for damages if you make material
@@ -959,9 +959,9 @@ export default function TermsOfService() {
           <div className="text-xl font-medium pl-6">Informal Negotiations</div>
           <div className="text-xs pl-6">
             To expedite resolution and control the cost of any dispute,
-            controversy, or claim related to these Legal Terms (each a 'Dispute'
-            and collectively, the 'Disputes') brought by either you or us
-            (individually, a 'Party' and collectively, the 'Parties'), the
+            controversy, or claim related to these Legal Terms (each a &apos;Dispute&apos;
+            and collectively, the &apos;Disputes&apos;) brought by either you or us
+            (individually, a &apos;Party&apos; and collectively, the &apos;Parties&apos;), the
             Parties agree to first attempt to negotiate any Dispute (except
             those Disputes expressly provided below) informally for at least
             thirty (30) days before initiating arbitration. Such informal
@@ -1032,7 +1032,7 @@ export default function TermsOfService() {
             THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF
             MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
             NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE
-            ACCURACY OR COMPLETENESS OF THE SERVICES' CONTENT OR THE CONTENT OF
+            ACCURACY OR COMPLETENESS OF THE SERVICES&apos; CONTENT OR THE CONTENT OF
             ANY WEBSITES OR MOBILE APPLICATIONS LINKED TO THE SERVICES AND WE
             WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY (1) ERRORS,
             MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (2) PERSONAL
@@ -1086,7 +1086,7 @@ export default function TermsOfService() {
             You agree to defend, indemnify, and hold us harmless, including our
             subsidiaries, affiliates, and all of our respective officers,
             agents, partners, and employees, from and against any loss, damage,
-            liability, claim, or demand, including reasonable attorneys' fees
+            liability, claim, or demand, including reasonable attorneys&apos; fees
             and expenses, made by any third party due to or arising out of: (1)
             your Contributions; (2) use of the Services; (3) breach of these
             Legal Terms; (4) any breach of your representations and warranties
