@@ -961,7 +961,7 @@ export default function TermsOfService() {
             To expedite resolution and control the cost of any dispute,
             controversy, or claim related to these Legal Terms (each a &apos;Dispute&apos;
             and collectively, the &apos;Disputes&apos;) brought by either you or us
-            (individually, a &apos;Party&apos; and collectively, the &apos;Parties&apos;), the
+            (individually, a &apos;Party&apos; and collectively, the &ldquo;Parties&rdquo;), the
             Parties agree to first attempt to negotiate any Dispute (except
             those Disputes expressly provided below) informally for at least
             thirty (30) days before initiating arbitration. Such informal
