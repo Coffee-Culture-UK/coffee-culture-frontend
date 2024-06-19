@@ -16,7 +16,9 @@
   --darkBrown10: rgba(47, 33, 26, 0.10);
   --darkBrown20: rgba(46, 32, 25, 0.2);
   --darkBrown30: rgba(47, 33, 26, 0.302);
-  --darkBrown50: rgba(47, 33, 26, 0.7);
+  --darkBrown50: rgba(47, 33, 26, 0.5);
+  --darkBrown70: rgba(47, 33, 26, 0.7);
+  --darkBrown90: rgba(47, 33, 26, 0.75);
 }
 
 /* @media (prefers-color-scheme: dark) {
