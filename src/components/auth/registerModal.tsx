@@ -6,6 +6,7 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import Button from "@mui/material/Button";
 import { Google } from "../navigation/icons";
+import Link from "next/link";
 
 enum UserType {
   SHOP = "shop",
@@ -190,9 +191,9 @@ export default function Register({ register }: { register: boolean }) {
           </div>
           <div className="text-xs text-center text-[var(--darkBrown50)]">
             By signing up you agree to our{" "}
-            <span className="underline text-[var(--darkBrown)] duration-300 hover:text-[var(--mainBrown)] cursor-pointer">
+            <Link href="/terms-of-service" className="underline text-[var(--darkBrown)] duration-300 hover:text-[var(--mainBrown)] cursor-pointer">
               terms of service
-            </span>{" "}
+            </Link>{" "}
             and{" "}
             <span className="underline text-[var(--darkBrown)] duration-300 hover:text-[var(--mainBrown)] cursor-pointer">
               privacy policy
