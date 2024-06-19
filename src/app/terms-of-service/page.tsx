@@ -1142,7 +1142,7 @@ export default function TermsOfService() {
           <div className="text-xl font-medium pl-6">Opting Out</div>
           <div className="text-xs pl-6">
             If at any time you wish to stop receiving SMS messages from us,
-            simply reply to the text with "STOP.” You may receive an SMS message
+            simply reply to the text with &ldquo;STOP.&rdquo; You may receive an SMS message
             confirming your opt out.
           </div>
           <div className="text-xl font-medium pl-6">Message and Data Rates</div>
