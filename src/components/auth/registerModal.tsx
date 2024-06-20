@@ -45,11 +45,25 @@ export default function Register({ register }: { register: boolean }) {
   );
 
   const removeQueryParam = (key : string) => {
+    
     params.delete(key);
+    
     const newQueryString = params.toString();
+    
     const newUrl = newQueryString ? `?${newQueryString}` : '';
-    router.replace(newUrl);
+    if (newUrl) {
+      router.replace(newUrl);
+    } else {
+      router.push(pathname);
+    }
+    
   };
+
+  const addQueryParam = (key: string, value: string)=>{
+    params.append(key, value)
+    const newQueryString = params.toString();
+    router.replace(newQueryString);
+  }
 
   const handleSubmit = async () => {
     // e.preventDefault();
@@ -69,7 +83,9 @@ export default function Register({ register }: { register: boolean }) {
         return Endpoints.registerShopUser(values);
     },
     onSuccess: () => {
-        router.push( pathname + "?" + createQueryString("step", "2"))
+        // router.push( pathname + "?" + createQueryString("step", "2"))
+        addQueryParam('step', '2');
+        removeQueryParam('register');
     },
     onError: (error: any) => {
         toast.error("Failed to register user");
@@ -83,7 +99,8 @@ export default function Register({ register }: { register: boolean }) {
       <Dialog
         open={register}
         onClose={() => {
-          router.push(pathname);
+          removeQueryParam('register')
+          // router.push(pathname);
         }}
         PaperProps={{
           style: {
