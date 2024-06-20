@@ -51,8 +51,8 @@ export default function Register({ register }: { register: boolean }) {
     router.replace(newUrl);
   };
 
-  const handleSubmit = async (e: React.MouseEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
+    // e.preventDefault();
     if (user.userType == UserType.SHOP) {
       registerShopMutation.mutate({email: user.email, password: user.password, firstName: user.firstName, lastName: "no", role: "owner"})
     }
