@@ -1,12 +1,18 @@
 import { primary } from "@/themes/customs/palette";
 import { Dialog, TextField } from "@mui/material";
-import { usePathname, useRouter } from "next/navigation";
-import React, { Suspense, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import React, { Suspense, useCallback, useState } from "react";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import Button from "@mui/material/Button";
 import { Google } from "../navigation/icons";
 import Link from "next/link";
+import Endpoints from "@/api/endpoints";
+import toast from "react-hot-toast";
+import { useMutation } from "react-query";
+import LoadingTopbar from "../progressBar/loadingTopBar";
+import axios from "axios";
+import DeleteQuery from "@/middleware/deleteQuery";
 
 enum UserType {
   SHOP = "shop",
@@ -15,16 +21,65 @@ enum UserType {
 
 export default function Register({ register }: { register: boolean }) {
   const router = useRouter();
+  
+  const searchParams = useSearchParams();
+  const params = new URLSearchParams(searchParams)
   const pathname = usePathname();
   const [user, setUser] = useState({
     userType: UserType.SHOP,
     email: "",
     firstName: "",
+    lastName: "",
+    role: null,
     password: "",
   });
 
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+
+      return params.toString();
+    },
+    [searchParams]
+  );
+
+  const removeQueryParam = (key : string) => {
+    params.delete(key);
+    const newQueryString = params.toString();
+    const newUrl = newQueryString ? `?${newQueryString}` : '';
+    router.replace(newUrl);
+  };
+
+  const handleSubmit = async (e: React.MouseEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (user.userType == UserType.SHOP) {
+      registerShopMutation.mutate({email: user.email, password: user.password, firstName: user.firstName, lastName: "no", role: "owner"})
+    }
+  }
+
+  const registerShopMutation = useMutation({
+    mutationFn: async (values: {
+        email: string;
+        password: string;
+        firstName: string;
+        lastName: string;
+        role: string;
+    }) => {
+        return Endpoints.registerShopUser(values);
+    },
+    onSuccess: () => {
+        router.push( pathname + "?" + createQueryString("step", "2"))
+    },
+    onError: (error: any) => {
+        toast.error("Failed to register user");
+        console.log(error);
+    },
+});
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
+      {registerShopMutation.isLoading && <LoadingTopbar />}
       <Dialog
         open={register}
         onClose={() => {
@@ -102,7 +157,7 @@ export default function Register({ register }: { register: boolean }) {
             disableElevation
             // onClick={() => {
             //   router.push(
-            //     pathname + "?" + createQueryString("register", "true")
+            //     
             //   );
             // }}
             fullWidth
@@ -120,18 +175,16 @@ export default function Register({ register }: { register: boolean }) {
             id="outlined-required"
             label="Email"
             variant="outlined"
+            value={user.email}
+            onChange={(
+              e: React.ChangeEvent<HTMLInputElement>
+            ) => {
+              setUser({ ...user, email: e.target.value });
+            }}
+            
             sx={{
               fontSize: "12px",
               fontFamily: "Inter",
-              // "& .MuiInputBase-root": {
-              //   height: "40px",
-              //   display: "flex",
-              //   alignItems: "center",
-              // },
-              // "& .MuiOutlinedInput-root": {
-              //   height: "40px",
-              //   alignItems: "center",
-              // }
             }}
             fullWidth
             inputProps={{
@@ -150,6 +203,12 @@ export default function Register({ register }: { register: boolean }) {
             fullWidth
             inputProps={{ style: { fontSize: 12 } }}
             InputLabelProps={{ style: { fontSize: 12 } }}
+            value={user.firstName}
+            onChange={(
+              e: React.ChangeEvent<HTMLInputElement>
+            ) => {
+              setUser({ ...user, firstName: e.target.value });
+            }}
           />
           <TextField
             id="outlined-required"
@@ -159,8 +218,16 @@ export default function Register({ register }: { register: boolean }) {
             fullWidth
             inputProps={{ style: { fontSize: 12 } }}
             InputLabelProps={{ style: { fontSize: 12 } }}
+            value={user.password}
+            onChange={(
+              e: React.ChangeEvent<HTMLInputElement>
+            ) => {
+              setUser({ ...user, password: e.target.value });
+            }}
           />
           <Button
+          type="submit"
+          onClick={handleSubmit}
             variant="contained"
             color="secondary"
             sx={{
@@ -191,7 +258,10 @@ export default function Register({ register }: { register: boolean }) {
           </div>
           <div className="text-xs text-center text-[var(--darkBrown50)]">
             By signing up you agree to our{" "}
-            <Link href="/terms-of-service" className="underline text-[var(--darkBrown)] duration-300 hover:text-[var(--mainBrown)] cursor-pointer">
+            <Link
+              href="/terms-of-service"
+              className="underline text-[var(--darkBrown)] duration-300 hover:text-[var(--mainBrown)] cursor-pointer"
+            >
               terms of service
             </Link>{" "}
             and{" "}
