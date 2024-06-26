@@ -29,8 +29,6 @@ export default function Register({ register }: { register: boolean }) {
     userType: UserType.SHOP,
     email: "",
     firstName: "",
-    lastName: "",
-    role: null,
     password: "",
   });
 
@@ -68,7 +66,7 @@ export default function Register({ register }: { register: boolean }) {
   const handleSubmit = async () => {
     // e.preventDefault();
     if (user.userType == UserType.SHOP) {
-      registerShopMutation.mutate({email: user.email, password: user.password, firstName: user.firstName, lastName: "no", role: "owner"})
+      registerShopMutation.mutate({email: user.email, password: user.password, firstName: user.firstName})
     }
   }
 
@@ -77,18 +75,19 @@ export default function Register({ register }: { register: boolean }) {
         email: string;
         password: string;
         firstName: string;
-        lastName: string;
-        role: string;
     }) => {
         return Endpoints.registerShopUser(values);
+        
     },
     onSuccess: () => {
-        // router.push( pathname + "?" + createQueryString("step", "2"))
-        addQueryParam('step', '2');
-        removeQueryParam('register');
+        // // router.push( pathname + "?" + createQueryString("step", "2"))
+        // addQueryParam('step', '2');
+        // removeQueryParam('register');
+        router.push('/register/step-2')
     },
     onError: (error: any) => {
         toast.error("Failed to register user");
+        console.log("going");
         console.log(error);
     },
 });
@@ -112,7 +111,7 @@ export default function Register({ register }: { register: boolean }) {
         }}
       >
         <div className="flex flex-col gap-5 p-10 bg-[var(--background)] items-center">
-          <div className="text-2xl font-medium">sign up</div>
+          <div className="text-2xl font-medium">Sign Up</div>
 
           <div className="flex gap-x-2 items-center justify-center">
             <StorefrontIcon

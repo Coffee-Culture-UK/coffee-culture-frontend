@@ -6,8 +6,10 @@ import { primary } from "@/themes/customs/palette";
 import useWindowDimensions from "@/utils/window";
 import { useRouter } from "next/navigation";
 import { LongLogo } from "./icons";
+import { useNavContext } from "@/contexts/nav";
 
 export default function NavBar() {
+  const {canSee} = useNavContext();
     const [prevScrollPos, setPrevScrollPos] = useState(0);
   const { width } = useWindowDimensions() ?? { width: 0 };
   const [visible, setVisible] = useState(false);
@@ -33,7 +35,7 @@ export default function NavBar() {
   });
 
     return(
-        <>
+        <div className={`${canSee ? 'block' : 'hidden'}`}>
       <Slide appear={false} direction="down" in={!visible}>
         <AppBar
         sx={{
@@ -90,7 +92,7 @@ export default function NavBar() {
           </div>
         </AppBar>
         </Slide>
-    </>
+    </div>
         
     )
 }
