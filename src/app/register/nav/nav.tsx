@@ -5,7 +5,7 @@ export default function RegisterNav({step}:{step: string}) {
         <div className="flex gap-x-20">
           {navItems.map((item: NavItem, ref) => {
             return (
-              <div className="flex items-start justify-center w-10">
+              <div key={ref} className="flex items-start justify-center w-10">
                 <div className="flex flex-col items-center justify-center gap-y-2">
                   <div
                     className={` relative w-10 h-10 rounded-full flex items-center justify-center text-[var(--backgroundColour)] text-base font-medium ${
