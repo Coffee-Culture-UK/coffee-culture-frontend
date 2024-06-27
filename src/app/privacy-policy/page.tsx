@@ -6,11 +6,11 @@ export default function PrivacyPolicy() {
       <div className="flex flex-col gap-y-10 mt-[60px] text-[var(--darkBrown)] justify-start items-center p-12">
         <div className="flex flex-col text-center">
           <div className="text-3xl font-semibold">
-            Terms Of <span className="italic font-medium">Use</span>
+            <span className="italic font-medium">Privacy</span> Policy
           </div>
           <div className="text-xs">Last updated June 07, 2024 </div>
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
