@@ -4,6 +4,8 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import RegisterNav from "../nav/nav";
 import { divide } from "lodash";
+import { Button } from "@mui/material";
+import { secondary } from "@/themes/customs/palette";
 
 export default function Step2() {
   const { setCanSee } = useNavContext();
@@ -18,7 +20,7 @@ export default function Step2() {
 
   return (
     <div className="w-screen h-screen flex text-[var(--darkBrown)]">
-      <div className="w-1/2 flex flex-col items-center p-10">
+      <div className="w-1/2 flex flex-col items-center p-10 min-w-[500px]">
         <RegisterNav step={step} />
         <div className="text-3xl font-medium pt-8 pb-7">Choose your plan</div>
         <div className="flex bg-[var(--darkBrown10)] rounded-full text-[var(--darkBrown)] text-xs relative">
@@ -74,8 +76,9 @@ export default function Step2() {
             return (
               <div
                 key={packageDetail.packageId}
-                className={`p-4 pt-6 border-2 border-solid rounded-lg flex flex-col gap-y-4 min-w-44 max-w-52 duration-300 ${
-                  packageDetail.packageName == "Stamp Card + Subscription"
+                className={`p-4 pt-6 border-2 border-solid rounded-lg flex flex-col gap-y-4 min-w-44 max-w-52 duration-300 h-full ${
+                  packageDetail.subscription == true &&
+                  packageDetail.stampCard == true
                     ? "border-[var(--green)] bg-[var(--green20)]"
                     : "border-[var(--darkBrown30)]"
                 }`}
@@ -123,12 +126,12 @@ export default function Step2() {
                       {billingFreq == "monthly" &&
                         `then £${packageDetail.monthly.price} /month`}
                     </span>
-                    {packageDetail.subscription == true &&
+                    {/* {packageDetail.subscription == true &&
                       billingFreq == "monthly" &&
                       ` +${packageDetail.monthly.transactionFee}% transaction fee per customer`}
                     {packageDetail.subscription == true &&
                       billingFreq == "annually" &&
-                      ` +${packageDetail.annually.transactionFee}% transaction fee per customer`}
+                      ` +${packageDetail.annually.transactionFee}% transaction fee per customer`} */}
                   </div>
                 </div>
                 <div
@@ -136,13 +139,35 @@ export default function Step2() {
                 >
                   {packageDetail.packageName}
                 </div>
-                <ul className="text-xs">
-                  {packageDetail.about.map((point)=>{
-                    return(
-                      <li key={point}>{point}</li>
-                    )
+                <ul className="text-xs mb-2">
+                  {packageDetail.about.map((point) => {
+                    return <li key={point}>{point}</li>;
                   })}
                 </ul>
+                
+                  <Button
+                    className="mt-auto"
+                    variant={`${(packageDetail.stampCard == true && packageDetail.subscription == true) ? "contained": "outlined"}`}
+                    color="secondary"
+                    sx={{
+                      fontWeight: "400",
+                      fontSize: "12px",
+                      paddingX: "24px",
+                      color: secondary.contrastText,
+                      border: !(packageDetail.stampCard == true && packageDetail.subscription == true) && "solid 2px secondary.main",
+                      borderColor: !(packageDetail.stampCard == true && packageDetail.subscription == true) && secondary.main,
+
+                      "&:hover": {
+                        backgroundColor: (packageDetail.stampCard == true && packageDetail.subscription == true) && "#AFAF81",
+                      },
+                    }}
+                    disableElevation
+                  >
+                    Select Plan
+                  </Button>
+                
+                  
+                
               </div>
             );
           })}
