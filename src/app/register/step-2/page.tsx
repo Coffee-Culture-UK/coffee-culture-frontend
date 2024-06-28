@@ -144,30 +144,41 @@ export default function Step2() {
                     return <li key={point}>{point}</li>;
                   })}
                 </ul>
-                
-                  <Button
-                    className="mt-auto"
-                    variant={`${(packageDetail.stampCard == true && packageDetail.subscription == true) ? "contained": "outlined"}`}
-                    color="secondary"
-                    sx={{
-                      fontWeight: "400",
-                      fontSize: "12px",
-                      paddingX: "24px",
-                      color: secondary.contrastText,
-                      border: !(packageDetail.stampCard == true && packageDetail.subscription == true) && "solid 2px secondary.main",
-                      borderColor: !(packageDetail.stampCard == true && packageDetail.subscription == true) && secondary.main,
 
-                      "&:hover": {
-                        backgroundColor: (packageDetail.stampCard == true && packageDetail.subscription == true) && "#AFAF81",
-                      },
-                    }}
-                    disableElevation
-                  >
-                    Select Plan
-                  </Button>
-                
-                  
-                
+                <Button
+                  className="mt-auto"
+                  variant={`${
+                    packageDetail.stampCard == true &&
+                    packageDetail.subscription == true
+                      ? "contained"
+                      : "outlined"
+                  }`}
+                  color="secondary"
+                  sx={{
+                    fontWeight: "400",
+                    fontSize: "12px",
+                    paddingX: "24px",
+                    color: secondary.contrastText,
+                    ...(!(
+                      packageDetail.stampCard == true &&
+                      packageDetail.subscription == true
+                    ) && { border: "solid 2px secondary.main" }),
+                    ...(!(
+                      packageDetail.stampCard == true &&
+                      packageDetail.subscription == true
+                    ) && { borderColor: secondary.main }),
+
+                    "&:hover": {
+                      ...(packageDetail.stampCard == true &&
+                        packageDetail.subscription == true && {
+                          backgroundColor: "#AFAF81",
+                        }),
+                    },
+                  }}
+                  disableElevation
+                >
+                  Select Plan
+                </Button>
               </div>
             );
           })}
