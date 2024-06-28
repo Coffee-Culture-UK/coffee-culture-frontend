@@ -6,6 +6,6 @@ export default function ShopRegisterLayout({
   return (
     <div className="w-screen min-h-screen flex">
       {children}
-      <img src="/map.png" alt="" className=" absolute w-1/2 right-0 h-screen -z-10" /></div>
+      <img src="/map2.png" alt="" className=" absolute w-1/2 right-0 h-screen -z-10" /></div>
   );
 }
