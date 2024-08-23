@@ -6,7 +6,7 @@ import Hero from "@/components/hero/hero";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 
-export default function Home() {
+export default async function Home() {
   const searchParams = useSearchParams();
   const register = searchParams.get("register") == "true";
   const login = searchParams.get("login") == "true";

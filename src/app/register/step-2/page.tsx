@@ -76,7 +76,10 @@ export default function Step2() {
             return (
               <div
                 key={packageDetail.packageId}
-                className={`p-4 pt-6 border-2 border-solid rounded-lg flex flex-col gap-y-4 min-w-44 max-w-52 duration-300 h-full ${
+                className={`p-4 pt-6 border-2 border-solid rounded-lg w-1/3 flex flex-col gap-y-4 min-w-44 max-w-52 duration-300 h-full ${
+                  packageName == packageDetail.packageName &&
+                  "!border-[var(--darkBrown)]"
+                } ${
                   packageDetail.subscription == true &&
                   packageDetail.stampCard == true
                     ? "border-[var(--green)] bg-[var(--green20)]"
@@ -175,9 +178,17 @@ export default function Step2() {
                         }),
                     },
                   }}
+                  onClick={() => {
+                    if (packageName == packageDetail.packageName) {
+                      setPackageName("");
+                    } else {
+                      setPackageName(packageDetail.packageName);
+                    }
+                  }}
                   disableElevation
                 >
-                  Select Plan
+                  {packageName == packageDetail.packageName ? "Selected" : "Select Plan"}
+                  {/* Select Plan */}
                 </Button>
               </div>
             );

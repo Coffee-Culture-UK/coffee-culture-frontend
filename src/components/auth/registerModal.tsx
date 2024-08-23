@@ -93,7 +93,7 @@ export default function Register({ register }: { register: boolean }) {
 });
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<LoadingTopbar />}>
       {registerShopMutation.isLoading && <LoadingTopbar />}
       <Dialog
         open={register}
